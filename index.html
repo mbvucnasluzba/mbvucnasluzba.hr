@@ -7,8 +7,8 @@
 <meta charset="UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	<!-- Google tag (gtag.js) -->
+
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16918900135"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -17,279 +17,162 @@
 
   gtag('config', 'AW-16918900135');
 </script>
-	
 
+<!-- Google Ads konverzija: Klikni za poziv -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
 
+  gtag('event', 'conversion', {
+      'send_to': 'AW-16918900135/6KTGCLHP5d8cEKfbx4M_',
+      'value': 1.0,
+      'currency': 'EUR',
+      'event_callback': callback
+  });
+
+  return false;
+}
+</script>
 
 <title>Vučna služba Zagreb 0-24 | Dolazak 15-30 min</title>
 
-
-
 <meta name="description" content="Vučna služba Zagreb 0-24 sata. Dolazak 15-30 min. Pomoć na cesti i vuča vozila u Zagrebu i okolici. Nazovi odmah +385 91 640 4982.">
-
-
 
 <style>
 
 *{margin:0;padding:0;box-sizing:border-box;}
 
-
-
 body{
-
 font-family:Arial, sans-serif;
-
 background:#111;
-
 color:white;
-
 line-height:1.8;
-
 }
-
-
 
 .header{
-
 position:fixed;
-
 width:100%;
-
 top:0;
-
 left:0;
-
 display:flex;
-
 justify-content:space-between;
-
 align-items:center;
-
 padding:15px 20px;
-
 background:rgba(0,0,0,0.9);
-
 z-index:1000;
-
 }
-
-
 
 .header img{height:50px;}
 
-
-
 .phone-top{
-
 color:#ffcc00;
-
 font-weight:bold;
-
 font-size:16px;
-
 }
-
-
 
 .hero{
-
 background:url('kamion.jpg.jpeg') center center no-repeat;
-
 background-size:cover;
-
 height:90vh;
-
 display:flex;
-
 align-items:center;
-
 justify-content:center;
-
 text-align:center;
-
 background-color:rgba(0,0,0,0.6);
-
 background-blend-mode:overlay;
-
 padding:20px;
-
 }
-
-
 
 .hero h1{
-
 font-size:38px;
-
 color:#ffcc00;
-
 margin-bottom:15px;
-
 }
-
-
 
 .hero p{
-
 font-size:20px;
-
 margin-bottom:20px;
-
 }
-
-
 
 .button{
-
 display:inline-block;
-
 padding:12px 30px;
-
 background:#ffcc00;
-
 color:black;
-
 font-weight:bold;
-
 border-radius:5px;
-
 font-size:16px;
-
 text-decoration:none;
-
 }
-
-
 
 .highlight{
-
 background:#ffcc00;
-
 color:black;
-
 text-align:center;
-
 padding:25px 15px;
-
 font-size:18px;
-
 font-weight:bold;
-
 }
-
-
 
 .section{
-
 padding:70px 15px;
-
 max-width:1100px;
-
 margin:auto;
-
 }
-
-
 
 .section h2{
-
 text-align:center;
-
 color:#ffcc00;
-
 margin-bottom:35px;
-
 font-size:28px;
-
 }
-
-
 
 .text-box{
-
 background:#000;
-
 padding:20px;
-
 margin-bottom:15px;
-
 border-left:5px solid #ffcc00;
-
 font-size:16px;
-
 }
-
-
 
 .price-highlight{
-
 background:#ffcc00;
-
 color:black;
-
 padding:20px;
-
 margin-bottom:15px;
-
 font-weight:bold;
-
 }
-
-
 
 .footer{
-
 background:black;
-
 padding:40px 15px;
-
 text-align:center;
-
 font-size:14px;
-
 }
-
-
 
 .footer strong{color:#ffcc00;}
 
-
-
 .call-fixed{
-
 position:fixed;
-
 bottom:0;
-
 left:0;
-
 width:100%;
-
 background:#ffcc00;
-
 text-align:center;
-
 padding:15px;
-
 z-index:999;
-
 }
-
-
 
 .call-fixed a{
-
 color:black;
-
 font-weight:bold;
-
 font-size:20px;
-
 text-decoration:none;
-
 }
-
-
 
 @media(max-width:768px){
 
@@ -315,11 +198,7 @@ text-decoration:none;
 
 </head>
 
-
-
 <body>
-
-
 
 <div class="header">
 
@@ -327,7 +206,9 @@ text-decoration:none;
 
 <div class="phone-top">
 
-<a href="tel:+385916404982" style="color:#ffcc00;text-decoration:none;">
+<a href="tel:+385916404982"
+onclick="return gtag_report_conversion('tel:+385916404982');"
+style="color:#ffcc00;text-decoration:none;">
 
 📞 +385 91 640 4982
 
@@ -337,8 +218,6 @@ text-decoration:none;
 
 </div>
 
-
-
 <div class="hero">
 
 <div>
@@ -347,13 +226,17 @@ text-decoration:none;
 
 <p>Kvar ili nezgoda? Dolazimo ODMAH • 0-24 • Bez čekanja</p>
 
-<a href="tel:+385916404982" class="button">📞 Nazovi odmah</a>
+<a href="tel:+385916404982"
+onclick="return gtag_report_conversion('tel:+385916404982');"
+class="button">
+
+📞 Nazovi odmah
+
+</a>
 
 </div>
 
 </div>
-
-
 
 <div class="highlight">
 
@@ -361,13 +244,9 @@ Dostupni 0-24 sata • Dolazak 15-30 min • Zagreb i okolica
 
 </div>
 
-
-
 <div class="section">
 
 <h2>Profesionalna vučna služba u Zagrebu</h2>
-
-
 
 <div class="text-box">
 
@@ -375,15 +254,11 @@ MB Vučna služba Zagreb pruža pouzdanu pomoć na cesti vozačima u nepredviđe
 
 </div>
 
-
-
 <div class="text-box">
 
 Specijalizirani smo za vuču osobnih i lakih teretnih vozila uz sigurnu i profesionalnu opremu.
 
 </div>
-
-
 
 <div class="text-box">
 
@@ -391,19 +266,13 @@ Transparentne cijene bez skrivenih troškova – cijena se dogovara unaprijed.
 
 </div>
 
-
-
 <div class="text-box">
 
 Dostupni 0-24 sata na području Zagreba, Sesveta, Velike Gorice i okolice uz brz dolazak.
 
 </div>
 
-
-
 </div>
-
-
 
 <!-- CJENIK -->
 
@@ -411,15 +280,11 @@ Dostupni 0-24 sata na području Zagreba, Sesveta, Velike Gorice i okolice uz brz
 
 <h2>Cjenik usluga</h2>
 
-
-
 <div class="text-box" style="text-align:center; font-weight:bold;">
 
 cijene su izražene u eurima bez PDV-a • Vrijedi za vozila do 1800 kg
 
 </div>
-
-
 
 <div class="text-box">
 
@@ -429,8 +294,6 @@ Paušal (utovar + istovar + prijevoz do 10 km)<br>
 
 </div>
 
-
-
 <div class="price-highlight">
 
 Paušal (utovar + istovar + prijevoz do 20 km)<br>
@@ -438,8 +301,6 @@ Paušal (utovar + istovar + prijevoz do 20 km)<br>
 80,00 €
 
 </div>
-
-
 
 <div class="text-box">
 
@@ -449,8 +310,6 @@ Paušal (utovar + istovar + prijevoz do 30 km)<br>
 
 </div>
 
-
-
 <div class="price-highlight">
 
 Prijevoz do 1800 kg<br>
@@ -458,8 +317,6 @@ Prijevoz do 1800 kg<br>
 1,60 € / km
 
 </div>
-
-
 
 <div class="text-box">
 
@@ -469,8 +326,6 @@ Prijevoz 1500 – 2500 kg<br>
 
 </div>
 
-
-
 <div class="text-box">
 
 Otežan utovar / istovar<br>
@@ -478,8 +333,6 @@ Otežan utovar / istovar<br>
 <strong style="color:#ffcc00;">30,00 €</strong>
 
 </div>
-
-
 
 <div class="text-box">
 
@@ -489,8 +342,6 @@ Izvlačenje vozila<br>
 
 </div>
 
-
-
 <div class="text-box">
 
 Čuvanje vozila<br>
@@ -498,8 +349,6 @@ Izvlačenje vozila<br>
 <strong style="color:#ffcc00;">10,00 € / dan</strong>
 
 </div>
-
-
 
 <div class="text-box" style="font-size:14px;">
 
@@ -511,11 +360,7 @@ Obračun prijevoza započinje od sjedišta tvrtke.
 
 </div>
 
-
-
 </div>
-
-
 
 <!-- SEO DODATAK -->
 
@@ -523,15 +368,11 @@ Obračun prijevoza započinje od sjedišta tvrtke.
 
 <h2>Vučna služba Zagreb i okolica</h2>
 
-
-
 <div class="text-box">
 
 Pružamo usluge vučne službe na području Zagreba, Sesveta, Velike Gorice i okolice. Dolazimo najčešće unutar 15-30 minuta.
 
 </div>
-
-
 
 <div class="text-box">
 
@@ -539,19 +380,13 @@ Naša šlep služba dostupna je 0-24 za sve vrste kvarova, prometnih nezgoda ili
 
 </div>
 
-
-
 <div class="text-box">
 
 Ako vam treba pouzdana vučna služba Zagreb, nazovite odmah i dolazimo u najkraćem roku.
 
 </div>
 
-
-
 </div>
-
-
 
 <div class="footer">
 
@@ -567,6 +402,17 @@ Email: mbvucnasluzba@gmail.com
 
 </div>
 
-
-
 <div class="call-fixed">
+
+<a href="tel:+385916404982"
+onclick="return gtag_report_conversion('tel:+385916404982');">
+
+📞 NAZOVI ODMAH – +385 91 640 4982
+
+</a>
+
+</div>
+
+</body>
+
+</html>
