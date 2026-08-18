@@ -1,418 +1,1776 @@
 <!DOCTYPE html>
-
 <html lang="hr">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16918900135"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16918900135"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-16918900135');
-</script>
-
-<!-- Google Ads konverzija: Klikni za poziv -->
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
+    function gtag() {
+      dataLayer.push(arguments);
     }
-  };
 
-  gtag('event', 'conversion', {
-      'send_to': 'AW-16918900135/6KTGCLHP5d8cEKfbx4M_',
-      'value': 1.0,
-      'currency': 'EUR',
-      'event_callback': callback
-  });
+    gtag('js', new Date());
+    gtag('config', 'AW-16918900135');
 
-  return false;
-}
-</script>
+    /* Google Ads konverzija - klik na telefon */
+    function gtag_report_conversion(url) {
+      let navigated = false;
 
-<title>Vučna služba Zagreb 0-24 | Dolazak 15-30 min</title>
+      const go = function () {
+        if (navigated) return;
+        navigated = true;
 
-<meta name="description" content="Vučna služba Zagreb 0-24 sata. Dolazak 15-30 min. Pomoć na cesti i vuča vozila u Zagrebu i okolici. Nazovi odmah +385 91 640 4982.">
+        if (url) {
+          window.location.href = url;
+        }
+      };
 
-<style>
+      gtag('event', 'conversion', {
+        'send_to': 'AW-16918900135/6KTGCLHP5d8cEKfbx4M_',
+        'value': 1.0,
+        'currency': 'EUR',
+        'event_callback': go
+      });
 
-*{margin:0;padding:0;box-sizing:border-box;}
+      setTimeout(go, 900);
 
-body{
-font-family:Arial, sans-serif;
-background:#111;
-color:white;
-line-height:1.8;
-}
+      return false;
+    }
+  </script>
 
-.header{
-position:fixed;
-width:100%;
-top:0;
-left:0;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 20px;
-background:rgba(0,0,0,0.9);
-z-index:1000;
-}
 
-.header img{height:50px;}
+  <!-- SEO -->
+  <title>Vučna služba Zagreb 0-24 | MB Vučna služba</title>
 
-.phone-top{
-color:#ffcc00;
-font-weight:bold;
-font-size:16px;
-}
+  <meta
+    name="description"
+    content="MB Vučna služba Zagreb dostupna 0-24. Brz dolazak, pomoć na cesti, vuča i prijevoz vozila u Zagrebu, Sesvetama, Ivanjoj Reci i okolici. Nazovi +385 91 640 4982."
+  >
 
-.hero{
-background:url('kamion.jpg.jpeg') center center no-repeat;
-background-size:cover;
-height:90vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-background-color:rgba(0,0,0,0.6);
-background-blend-mode:overlay;
-padding:20px;
-}
+  <meta
+    name="robots"
+    content="index,follow,max-image-preview:large"
+  >
 
-.hero h1{
-font-size:38px;
-color:#ffcc00;
-margin-bottom:15px;
-}
+  <link
+    rel="canonical"
+    href="https://mbvucnasluzba.hr/"
+  >
 
-.hero p{
-font-size:20px;
-margin-bottom:20px;
-}
 
-.button{
-display:inline-block;
-padding:12px 30px;
-background:#ffcc00;
-color:black;
-font-weight:bold;
-border-radius:5px;
-font-size:16px;
-text-decoration:none;
-}
+  <!-- Open Graph -->
+  <meta
+    property="og:type"
+    content="website"
+  >
 
-.highlight{
-background:#ffcc00;
-color:black;
-text-align:center;
-padding:25px 15px;
-font-size:18px;
-font-weight:bold;
-}
+  <meta
+    property="og:locale"
+    content="hr_HR"
+  >
 
-.section{
-padding:70px 15px;
-max-width:1100px;
-margin:auto;
-}
+  <meta
+    property="og:title"
+    content="MB Vučna služba Zagreb 0-24"
+  >
 
-.section h2{
-text-align:center;
-color:#ffcc00;
-margin-bottom:35px;
-font-size:28px;
-}
+  <meta
+    property="og:description"
+    content="Vučna služba, pomoć na cesti i prijevoz vozila u Zagrebu i okolici. Dostupni 0-24."
+  >
 
-.text-box{
-background:#000;
-padding:20px;
-margin-bottom:15px;
-border-left:5px solid #ffcc00;
-font-size:16px;
-}
+  <meta
+    property="og:url"
+    content="https://mbvucnasluzba.hr/"
+  >
 
-.price-highlight{
-background:#ffcc00;
-color:black;
-padding:20px;
-margin-bottom:15px;
-font-weight:bold;
-}
+  <meta
+    property="og:image"
+    content="https://mbvucnasluzba.hr/assets/mb-vucna-sluzba-zagreb-hero.webp"
+  >
 
-.footer{
-background:black;
-padding:40px 15px;
-text-align:center;
-font-size:14px;
-}
 
-.footer strong{color:#ffcc00;}
+  <!-- LOCAL BUSINESS SCHEMA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutomotiveBusiness",
+    "name": "MB Vučna služba",
+    "url": "https://mbvucnasluzba.hr/",
+    "telephone": "+385916404982",
+    "email": "mbvucnasluzba@gmail.com",
+    "image": "https://mbvucnasluzba.hr/assets/mb-vucna-sluzba-zagreb-hero.webp",
 
-.call-fixed{
-position:fixed;
-bottom:0;
-left:0;
-width:100%;
-background:#ffcc00;
-text-align:center;
-padding:15px;
-z-index:999;
-}
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Antuna Vugrina 5",
+      "addressLocality": "Ivanja Reka",
+      "addressRegion": "Zagreb",
+      "addressCountry": "HR"
+    },
 
-.call-fixed a{
-color:black;
-font-weight:bold;
-font-size:20px;
-text-decoration:none;
-}
+    "areaServed": [
+      "Zagreb",
+      "Sesvete",
+      "Ivanja Reka",
+      "Velika Gorica",
+      "Zagrebačka okolica"
+    ],
 
-@media(max-width:768px){
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      }
+    ],
 
-.hero h1{font-size:28px;}
+    "priceRange": "€€"
+  }
+  </script>
 
-.hero p{font-size:16px;}
 
-.button{padding:10px 25px;font-size:14px;}
+  <style>
 
-.section{padding:50px 10px;}
+    :root {
+      --bg: #0a0a0a;
+      --panel: #121212;
+      --panel-2: #181818;
+      --text: #f7f7f7;
+      --muted: #b9b9b9;
+      --yellow: #ffcc00;
+      --yellow-2: #ffd633;
+      --border: #2c2c2c;
+      --max: 1160px;
+    }
 
-.section h2{font-size:24px;}
 
-.text-box{padding:15px;font-size:15px;}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-.header img{height:45px;}
 
-.phone-top{font-size:14px;}
+    html {
+      scroll-behavior: smooth;
+    }
 
-}
 
-</style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      padding-bottom: 76px;
+    }
+
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+
+    a {
+      color: inherit;
+    }
+
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: auto;
+    }
+
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(5, 5, 5, 0.94);
+
+      border-bottom: 1px solid #222;
+
+      backdrop-filter: blur(10px);
+    }
+
+
+    .header-inner {
+      min-height: 76px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 18px;
+    }
+
+
+    .logo {
+      height: 52px;
+      width: auto;
+      object-fit: contain;
+    }
+
+
+    .top-call {
+      text-decoration: none;
+      color: var(--yellow);
+
+      font-weight: 800;
+
+      white-space: nowrap;
+    }
+
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      padding: 42px 0 34px;
+
+      background:
+        radial-gradient(
+          circle at 15% 20%,
+          rgba(255, 204, 0, 0.13),
+          transparent 30%
+        ),
+        linear-gradient(
+          180deg,
+          #0d0d0d,
+          #080808
+        );
+    }
+
+
+    .hero-grid {
+      display: grid;
+
+      grid-template-columns:
+        1.02fr
+        0.98fr;
+
+      gap: 38px;
+
+      align-items: center;
+    }
+
+
+    .eyebrow {
+      color: var(--yellow);
+
+      font-size: 0.92rem;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.1em;
+
+      font-weight: 900;
+
+      margin-bottom: 12px;
+    }
+
+
+    h1 {
+      font-size: clamp(
+        2.35rem,
+        5vw,
+        4.8rem
+      );
+
+      line-height: 1.03;
+
+      letter-spacing: -0.045em;
+
+      margin-bottom: 18px;
+    }
+
+
+    .hero-copy {
+      color: #dedede;
+
+      font-size: clamp(
+        1.05rem,
+        2vw,
+        1.28rem
+      );
+
+      max-width: 680px;
+
+      margin-bottom: 25px;
+    }
+
+
+    .hero-points {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 10px;
+
+      margin-bottom: 26px;
+    }
+
+
+    .pill {
+      border: 1px solid #353535;
+
+      background: #151515;
+
+      padding: 8px 12px;
+
+      border-radius: 999px;
+
+      font-weight: 700;
+
+      font-size: 0.93rem;
+    }
+
+
+
+    /* BUTTON */
+
+    .btn {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 8px;
+
+      min-height: 54px;
+
+      padding: 0 23px;
+
+      border-radius: 10px;
+
+      text-decoration: none;
+
+      font-weight: 900;
+
+      transition: 0.2s ease;
+    }
+
+
+    .btn-primary {
+      background: var(--yellow);
+      color: #090909;
+    }
+
+
+    .btn-primary:hover {
+      background: var(--yellow-2);
+
+      transform: translateY(-1px);
+    }
+
+
+
+    /* HERO FOTOGRAFIJA */
+
+    .hero-photo {
+      background: #151515;
+
+      border: 1px solid #262626;
+
+      border-radius: 18px;
+
+      overflow: hidden;
+
+      box-shadow:
+        0 18px 50px
+        rgba(0, 0, 0, 0.4);
+    }
+
+
+    .hero-photo img {
+      width: 100%;
+      height: auto;
+
+      aspect-ratio: 4 / 5;
+
+      object-fit: cover;
+
+      object-position: center 45%;
+    }
+
+
+
+    /* =========================
+       TRUST BAR
+    ========================= */
+
+    .trust-bar {
+      background: var(--yellow);
+
+      color: #090909;
+
+      font-weight: 900;
+
+      text-align: center;
+
+      padding: 18px 14px;
+    }
+
+
+
+    /* =========================
+       SEKCIJE
+    ========================= */
+
+    section {
+      padding: 72px 0;
+    }
+
+
+    .section-title {
+      text-align: center;
+
+      color: var(--yellow);
+
+      font-size: clamp(
+        1.8rem,
+        3vw,
+        2.55rem
+      );
+
+      line-height: 1.15;
+
+      margin-bottom: 12px;
+    }
+
+
+    .section-lead {
+      text-align: center;
+
+      color: var(--muted);
+
+      max-width: 760px;
+
+      margin:
+        0 auto 34px;
+    }
+
+
+
+    /* =========================
+       USLUGE
+    ========================= */
+
+    .cards {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 18px;
+    }
+
+
+    .card {
+      background: var(--panel);
+
+      border:
+        1px solid
+        var(--border);
+
+      border-radius: 14px;
+
+      padding: 24px;
+    }
+
+
+    .card h3 {
+      color: var(--yellow);
+
+      margin-bottom: 9px;
+
+      font-size: 1.12rem;
+    }
+
+
+    .card p {
+      color: #d4d4d4;
+    }
+
+
+
+    /* =========================
+       CJENIK
+    ========================= */
+
+    .price-wrap {
+      max-width: 900px;
+
+      margin: auto;
+    }
+
+
+    .price-note {
+      background: #141414;
+
+      border:
+        1px solid
+        #303030;
+
+      border-radius: 12px;
+
+      padding: 17px 20px;
+
+      text-align: center;
+
+      font-weight: 800;
+
+      margin-bottom: 16px;
+    }
+
+
+    .price-row {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 22px;
+
+      background: var(--panel);
+
+      border:
+        1px solid
+        #292929;
+
+      border-radius: 12px;
+
+      padding: 19px 20px;
+
+      margin-bottom: 10px;
+    }
+
+
+    .price-row.featured {
+      background: var(--yellow);
+
+      color: #080808;
+
+      border-color: var(--yellow);
+    }
+
+
+    .price-row strong {
+      color: var(--yellow);
+
+      font-size: 1.08rem;
+
+      white-space: nowrap;
+    }
+
+
+    .price-row.featured strong {
+      color: #080808;
+    }
+
+
+    .terms {
+      color: #bdbdbd;
+
+      font-size: 0.93rem;
+
+      margin-top: 15px;
+
+      background: #101010;
+
+      border-left:
+        4px solid
+        var(--yellow);
+
+      padding: 16px 18px;
+    }
+
+
+
+    /* =========================
+       GALERIJA
+    ========================= */
+
+    .gallery {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 14px;
+    }
+
+
+    .gallery figure {
+      background: #101010;
+
+      border:
+        1px solid
+        #242424;
+
+      border-radius: 14px;
+
+      overflow: hidden;
+    }
+
+
+    .gallery img {
+      width: 100%;
+
+      aspect-ratio: 4 / 5;
+
+      object-fit: cover;
+
+      transition:
+        transform 0.25s ease;
+    }
+
+
+    .gallery figure:hover img {
+      transform: scale(1.02);
+    }
+
+
+    .gallery figcaption {
+      color: #c8c8c8;
+
+      padding:
+        12px 14px 14px;
+
+      font-size: 0.9rem;
+    }
+
+
+
+    /* =========================
+       PODRUČJE RADA
+    ========================= */
+
+    .area-box {
+      max-width: 900px;
+
+      margin: auto;
+
+      background:
+        linear-gradient(
+          135deg,
+          #151515,
+          #0f0f0f
+        );
+
+      border:
+        1px solid
+        #2e2e2e;
+
+      border-radius: 16px;
+
+      padding: 28px;
+    }
+
+
+    .area-box p + p {
+      margin-top: 10px;
+    }
+
+
+    .area-box strong {
+      color: var(--yellow);
+    }
+
+
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+      background: var(--yellow);
+
+      color: #090909;
+
+      text-align: center;
+
+      padding:
+        56px 20px;
+    }
+
+
+    .cta h2 {
+      font-size: clamp(
+        1.8rem,
+        4vw,
+        3rem
+      );
+
+      line-height: 1.1;
+
+      margin-bottom: 12px;
+    }
+
+
+    .cta p {
+      font-weight: 700;
+
+      margin-bottom: 22px;
+    }
+
+
+    .cta .btn {
+      background: #090909;
+
+      color: #ffffff;
+    }
+
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #050505;
+
+      text-align: center;
+
+      padding:
+        42px 16px 34px;
+
+      color: #cfcfcf;
+
+      font-size: 0.94rem;
+    }
+
+
+    footer strong {
+      color: var(--yellow);
+    }
+
+
+
+    /* =========================
+       FIKSNI GUMB ZA POZIV
+    ========================= */
+
+    .call-fixed {
+      position: fixed;
+
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      z-index: 1200;
+
+      background: var(--yellow);
+
+      border-top:
+        1px solid
+        #d9ad00;
+
+      padding:
+        11px 14px;
+
+      text-align: center;
+    }
+
+
+    .call-fixed a {
+      display: block;
+
+      color: #080808;
+
+      text-decoration: none;
+
+      font-weight: 900;
+
+      font-size: 1.08rem;
+    }
+
+
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .hero {
+        padding-top: 28px;
+      }
+
+
+      .hero-photo {
+        max-width: 640px;
+
+        margin: auto;
+      }
+
+
+      .hero-photo img {
+        aspect-ratio: 4 / 3;
+
+        object-position:
+          center 47%;
+      }
+
+
+      .cards {
+        grid-template-columns:
+          1fr 1fr;
+      }
+
+
+      .gallery {
+        grid-template-columns:
+          1fr 1fr;
+      }
+
+    }
+
+
+
+    /* =========================
+       MOBITEL
+    ========================= */
+
+    @media (max-width: 620px) {
+
+      body {
+        padding-bottom: 72px;
+      }
+
+
+      .container {
+        width:
+          min(
+            100% - 22px,
+            var(--max)
+          );
+      }
+
+
+      .header-inner {
+        min-height: 68px;
+      }
+
+
+      .logo {
+        height: 44px;
+      }
+
+
+      .top-call {
+        font-size: 0.88rem;
+      }
+
+
+      .hero-grid {
+        gap: 22px;
+      }
+
+
+      h1 {
+        font-size: 2.4rem;
+      }
+
+
+      .hero-photo img {
+        aspect-ratio: 4 / 3;
+      }
+
+
+      section {
+        padding: 54px 0;
+      }
+
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+
+      .gallery {
+        grid-template-columns:
+          1fr 1fr;
+
+        gap: 9px;
+      }
+
+
+      .gallery figcaption {
+        display: none;
+      }
+
+
+      .price-row {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 6px;
+      }
+
+
+      .price-row strong {
+        white-space: normal;
+      }
+
+
+      .call-fixed a {
+        font-size: 1rem;
+      }
+
+    }
+
+  </style>
 
 </head>
 
+
 <body>
 
-<div class="header">
 
-<img src="logo.png.webp" alt="MB Vučna služba Zagreb logo">
+  <!-- =========================
+       HEADER
+  ========================== -->
 
-<div class="phone-top">
+  <header class="header">
 
-<a href="tel:+385916404982"
-onclick="return gtag_report_conversion('tel:+385916404982');"
-style="color:#ffcc00;text-decoration:none;">
+    <div class="container header-inner">
 
-📞 +385 91 640 4982
+      <img
+        class="logo"
+        src="logo.png.webp"
+        alt="MB Vučna služba Zagreb"
+      >
 
-</a>
 
-</div>
+      <a
+        class="top-call"
+        href="tel:+385916404982"
+        onclick="return gtag_report_conversion('tel:+385916404982');"
+        aria-label="Nazovi MB Vučnu službu na +385 91 640 4982"
+      >
 
-</div>
+        📞 +385 91 640 4982
 
-<div class="hero">
+      </a>
 
-<div>
+    </div>
 
-<h1>Vučna služba Zagreb – Dolazak 15-30 min</h1>
+  </header>
 
-<p>Kvar ili nezgoda? Dolazimo ODMAH • 0-24 • Bez čekanja</p>
 
-<a href="tel:+385916404982"
-onclick="return gtag_report_conversion('tel:+385916404982');"
-class="button">
 
-📞 Nazovi odmah
+  <main>
 
-</a>
 
-</div>
+    <!-- =========================
+         HERO
+    ========================== -->
 
-</div>
+    <section class="hero">
 
-<div class="highlight">
+      <div class="container hero-grid">
 
-Dostupni 0-24 sata • Dolazak 15-30 min • Zagreb i okolica
 
-</div>
+        <div>
 
-<div class="section">
+          <div class="eyebrow">
 
-<h2>Profesionalna vučna služba u Zagrebu</h2>
+            MB Vučna služba • Zagreb i okolica
 
-<div class="text-box">
+          </div>
 
-MB Vučna služba Zagreb pruža pouzdanu pomoć na cesti vozačima u nepredviđenim situacijama poput kvara ili nezgode.
 
-</div>
+          <h1>
 
-<div class="text-box">
+            Vučna služba Zagreb 0-24
 
-Specijalizirani smo za vuču osobnih i lakih teretnih vozila uz sigurnu i profesionalnu opremu.
+          </h1>
 
-</div>
 
-<div class="text-box">
+          <p class="hero-copy">
 
-Transparentne cijene bez skrivenih troškova – cijena se dogovara unaprijed.
+            Kvar, nezgoda ili potreban prijevoz vozila?
 
-</div>
+            Dostupni smo svaki dan, danju i noću.
 
-<div class="text-box">
+            Dolazimo na područje Zagreba, Sesveta,
+            Ivanje Reke, Velike Gorice i okolice.
 
-Dostupni 0-24 sata na području Zagreba, Sesveta, Velike Gorice i okolice uz brz dolazak.
+          </p>
 
-</div>
 
-</div>
+          <div class="hero-points">
 
-<!-- CJENIK -->
+            <span class="pill">
+              0-24 svaki dan
+            </span>
 
-<div class="section">
+            <span class="pill">
+              Brz dolazak
+            </span>
 
-<h2>Cjenik usluga</h2>
+            <span class="pill">
+              Cijena dogovorena unaprijed
+            </span>
 
-<div class="text-box" style="text-align:center; font-weight:bold;">
+          </div>
 
-cijene su izražene u eurima bez PDV-a • Vrijedi za vozila do 1800 kg
 
-</div>
+          <a
+            class="btn btn-primary"
+            href="tel:+385916404982"
+            onclick="return gtag_report_conversion('tel:+385916404982');"
+          >
 
-<div class="text-box">
+            📞 Nazovi odmah
 
-Paušal (utovar + istovar + prijevoz do 10 km)<br>
+          </a>
 
-<strong style="color:#ffcc00;">60,00 €</strong>
+        </div>
 
-</div>
 
-<div class="price-highlight">
 
-Paušal (utovar + istovar + prijevoz do 20 km)<br>
+        <!-- NOVA NASLOVNA FOTOGRAFIJA -->
 
-80,00 €
+        <div class="hero-photo">
 
-</div>
+          <img
+            src="assets/mb-vucna-sluzba-zagreb-hero.webp"
+            alt="MB Vučna služba Zagreb - vozilo na vučnom kamionu"
+            width="1200"
+            height="1500"
+            fetchpriority="high"
+          >
 
-<div class="text-box">
+        </div>
 
-Paušal (utovar + istovar + prijevoz do 30 km)<br>
 
-<strong style="color:#ffcc00;">90,00 €</strong>
+      </div>
 
-</div>
+    </section>
 
-<div class="price-highlight">
 
-Prijevoz do 1800 kg<br>
 
-1,60 € / km
+    <!-- ŽUTA TRAKA -->
 
-</div>
+    <div class="trust-bar">
 
-<div class="text-box">
+      Dostupni 0-24 • Zagreb i okolica • Siguran prijevoz vozila
 
-Prijevoz 1500 – 2500 kg<br>
+    </div>
 
-<strong style="color:#ffcc00;">2 € / km</strong>
 
-</div>
 
-<div class="text-box">
+    <!-- =========================
+         USLUGE
+    ========================== -->
 
-Otežan utovar / istovar<br>
+    <section>
 
-<strong style="color:#ffcc00;">30,00 €</strong>
+      <div class="container">
 
-</div>
 
-<div class="text-box">
+        <h2 class="section-title">
 
-Izvlačenje vozila<br>
+          Pomoć kada vam je najpotrebnija
 
-<strong style="color:#ffcc00;">50,00 €</strong>
+        </h2>
 
-</div>
 
-<div class="text-box">
+        <p class="section-lead">
 
-Čuvanje vozila<br>
+          MB Vučna služba pruža vuču,
+          prijevoz i pomoć vozačima
+          u nepredviđenim situacijama.
 
-<strong style="color:#ffcc00;">10,00 € / dan</strong>
+        </p>
 
-</div>
 
-<div class="text-box" style="font-size:14px;">
 
-Rad subotom, nedjeljom, blagdanima i noću (20:00–06:00) +30%<br>
+        <div class="cards">
 
-Cestarine i trajekti nisu uključeni<br>
 
-Obračun prijevoza započinje od sjedišta tvrtke.
+          <article class="card">
 
-</div>
+            <h3>
+              Vučna služba
+            </h3>
 
-</div>
+            <p>
 
-<!-- SEO DODATAK -->
+              Siguran utovar, prijevoz
+              i istovar osobnih i
+              lakih teretnih vozila.
 
-<div class="section">
+            </p>
 
-<h2>Vučna služba Zagreb i okolica</h2>
+          </article>
 
-<div class="text-box">
 
-Pružamo usluge vučne službe na području Zagreba, Sesveta, Velike Gorice i okolice. Dolazimo najčešće unutar 15-30 minuta.
 
-</div>
+          <article class="card">
 
-<div class="text-box">
+            <h3>
+              Pomoć na cesti
+            </h3>
 
-Naša šlep služba dostupna je 0-24 za sve vrste kvarova, prometnih nezgoda ili prijevoza vozila.
+            <p>
 
-</div>
+              Dolazak na lokaciju kod
+              kvara, nezgode ili kada
+              vozilo više nije sigurno
+              za vožnju.
 
-<div class="text-box">
+            </p>
 
-Ako vam treba pouzdana vučna služba Zagreb, nazovite odmah i dolazimo u najkraćem roku.
+          </article>
 
-</div>
 
-</div>
 
-<div class="footer">
+          <article class="card">
 
-<strong>MB VUČNA SLUŽBA</strong><br>
+            <h3>
+              Prijevoz vozila
+            </h3>
 
-Vlasnik: Matej Begić<br>
+            <p>
 
-Sjedište: Antuna Vugrina 5, Ivanja Reka, Zagreb<br>
+              Dogovoreni prijevoz vozila
+              na željenu lokaciju uz
+              jasnu cijenu prije polaska.
 
-Telefon: +385 91 640 4982<br>
+            </p>
 
-Email: mbvucnasluzba@gmail.com
+          </article>
 
-</div>
 
-<div class="call-fixed">
 
-<a href="tel:+385916404982"
-onclick="return gtag_report_conversion('tel:+385916404982');">
+          <article class="card">
 
-📞 NAZOVI ODMAH – +385 91 640 4982
+            <h3>
+              Izvlačenje vozila
+            </h3>
 
-</a>
+            <p>
 
-</div>
+              Pomoć kod otežanog pristupa
+              i situacija u kojima je
+              potreban dodatni rad
+              pri utovaru.
+
+            </p>
+
+          </article>
+
+
+
+          <article class="card">
+
+            <h3>
+              Zagreb i Sesvete
+            </h3>
+
+            <p>
+
+              Pokrivamo Zagreb, Sesvete,
+              Ivanju Reku, Veliku Goricu
+              i širu okolicu.
+
+            </p>
+
+          </article>
+
+
+
+          <article class="card">
+
+            <h3>
+              Danju i noću
+            </h3>
+
+            <p>
+
+              Dostupni smo 0-24,
+              uključujući vikende,
+              blagdane i noćne
+              intervencije.
+
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CJENIK
+    ========================== -->
+
+    <section id="cjenik">
+
+      <div class="container">
+
+
+        <h2 class="section-title">
+
+          Cjenik usluga
+
+        </h2>
+
+
+        <p class="section-lead">
+
+          Transparentne cijene.
+          Konačnu cijenu dogovaramo
+          prije dolaska i prijevoza.
+
+        </p>
+
+
+
+        <div class="price-wrap">
+
+
+          <div class="price-note">
+
+            Cijene su izražene
+            u eurima bez PDV-a.
+
+          </div>
+
+
+
+          <div class="price-row">
+
+            <span>
+
+              Paušal — utovar + istovar
+              + prijevoz do 10 km
+
+            </span>
+
+            <strong>
+              60,00 €
+            </strong>
+
+          </div>
+
+
+
+          <div class="price-row featured">
+
+            <span>
+
+              Paušal — utovar + istovar
+              + prijevoz do 20 km
+
+            </span>
+
+            <strong>
+              80,00 €
+            </strong>
+
+          </div>
+
+
+
+          <div class="price-row">
+
+            <span>
+
+              Paušal — utovar + istovar
+              + prijevoz do 30 km
+
+            </span>
+
+            <strong>
+              90,00 €
+            </strong>
+
+          </div>
+
+
+
+          <!-- NOVA CIJENA -->
+
+          <div class="price-row featured">
+
+            <span>
+
+              Prijevoz vozila do 1500 kg
+
+            </span>
+
+            <strong>
+
+              1,50 € / km
+
+            </strong>
+
+          </div>
+
+
+
+          <div class="price-row">
+
+            <span>
+
+              Prijevoz vozila
+              1500 – 2500 kg
+
+            </span>
+
+            <strong>
+
+              2,00 € / km
+
+            </strong>
+
+          </div>
+
+
+
+          <div class="price-row">
+
+            <span>
+
+              Otežan utovar / istovar
+
+            </span>
+
+            <strong>
+
+              30,00 €
+
+            </strong>
+
+          </div>
+
+
+
+          <div class="price-row">
+
+            <span>
+
+              Izvlačenje vozila
+
+            </span>
+
+            <strong>
+
+              50,00 €
+
+            </strong>
+
+          </div>
+
+
+
+          <div class="price-row">
+
+            <span>
+
+              Čuvanje vozila
+
+            </span>
+
+            <strong>
+
+              10,00 € / dan
+
+            </strong>
+
+          </div>
+
+
+
+          <div class="terms">
+
+            Rad subotom, nedjeljom,
+            blagdanima i noću
+            (20:00–06:00) +30%.
+
+            <br>
+
+            Cestarine i trajekti
+            nisu uključeni.
+
+            <br>
+
+            Obračun prijevoza započinje
+            od sjedišta tvrtke.
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         GALERIJA
+    ========================== -->
+
+    <section>
+
+      <div class="container">
+
+
+        <h2 class="section-title">
+
+          MB Vučna služba na terenu
+
+        </h2>
+
+
+        <p class="section-lead">
+
+          Stvarne fotografije naših
+          intervencija i prijevoza vozila.
+
+        </p>
+
+
+
+        <div class="gallery">
+
+
+          <figure>
+
+            <img
+              src="assets/vucna-sluzba-zagreb-intervencija-1.webp"
+              alt="Vučna služba Zagreb - prijevoz osobnog vozila"
+              loading="lazy"
+              width="1200"
+              height="1500"
+            >
+
+            <figcaption>
+
+              Prijevoz vozila na području
+              Zagreba i okolice.
+
+            </figcaption>
+
+          </figure>
+
+
+
+          <figure>
+
+            <img
+              src="assets/vucna-sluzba-zagreb-intervencija-2.webp"
+              alt="MB Vučna služba - intervencija i prijevoz vozila"
+              loading="lazy"
+              width="1200"
+              height="1500"
+            >
+
+            <figcaption>
+
+              Siguran utovar
+              i prijevoz vozila.
+
+            </figcaption>
+
+          </figure>
+
+
+
+          <figure>
+
+            <img
+              src="assets/vucna-sluzba-zagreb-intervencija-3.webp"
+              alt="Vučna služba Zagreb - vozilo na platformi"
+              loading="lazy"
+              width="1200"
+              height="1500"
+            >
+
+            <figcaption>
+
+              Vučna služba
+              za osobna vozila.
+
+            </figcaption>
+
+          </figure>
+
+
+
+          <figure>
+
+            <img
+              src="assets/vucna-sluzba-zagreb-nocna-intervencija.webp"
+              alt="Noćna vučna služba Zagreb 0-24"
+              loading="lazy"
+              width="1200"
+              height="1500"
+            >
+
+            <figcaption>
+
+              Noćna intervencija —
+              dostupni 0-24.
+
+            </figcaption>
+
+          </figure>
+
+
+
+          <figure>
+
+            <img
+              src="assets/vucna-sluzba-zagreb-kisa-noc.webp"
+              alt="Vučna služba Zagreb po kiši i noću"
+              loading="lazy"
+              width="1200"
+              height="1500"
+            >
+
+            <figcaption>
+
+              Pomoć i prijevoz vozila
+              u zahtjevnim uvjetima.
+
+            </figcaption>
+
+          </figure>
+
+
+
+          <figure>
+
+            <img
+              src="assets/mb-vucna-sluzba-zagreb-hero.webp"
+              alt="MB Vučna služba Zagreb - vučni kamion"
+              loading="lazy"
+              width="1200"
+              height="1500"
+            >
+
+            <figcaption>
+
+              MB Vučna služba Zagreb.
+
+            </figcaption>
+
+          </figure>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         LOKALNI SEO
+    ========================== -->
+
+    <section>
+
+      <div class="container">
+
+
+        <h2 class="section-title">
+
+          Vučna služba Zagreb,
+          Sesvete i okolica
+
+        </h2>
+
+
+
+        <div class="area-box">
+
+
+          <p>
+
+            Sjedište MB Vučne službe
+            nalazi se u
+            <strong>Ivanjoj Reci</strong>,
+
+            odakle izlazimo na intervencije
+            prema Zagrebu, Sesvetama,
+            Velikoj Gorici i okolnim
+            područjima.
+
+          </p>
+
+
+          <p>
+
+            Trebate li
+
+            <strong>
+              vučnu službu,
+              šlep službu,
+              pomoć na cesti,
+              prijevoz ili
+              izvlačenje vozila
+            </strong>,
+
+            nazovite nas i recite
+            gdje se nalazite te
+            o kojem se vozilu radi.
+
+          </p>
+
+
+          <p>
+
+            Cijenu dogovaramo unaprijed
+            kako biste prije dolaska
+            znali što možete očekivati.
+
+          </p>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ZAVRŠNI POZIV
+    ========================== -->
+
+    <section class="cta">
+
+
+      <h2>
+
+        Trebate vučnu službu?
+
+      </h2>
+
+
+      <p>
+
+        Nazovite MB Vučnu službu —
+        dostupni smo 0-24.
+
+      </p>
+
+
+      <a
+        class="btn"
+        href="tel:+385916404982"
+        onclick="return gtag_report_conversion('tel:+385916404982');"
+      >
+
+        📞 +385 91 640 4982
+
+      </a>
+
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <strong>
+
+      MB VUČNA SLUŽBA
+
+    </strong>
+
+    <br>
+
+    Vlasnik: Matej Begić
+
+    <br>
+
+    Antuna Vugrina 5,
+    Ivanja Reka, Zagreb
+
+    <br>
+
+    Telefon:
+    +385 91 640 4982
+
+    <br>
+
+    Email:
+    mbvucnasluzba@gmail.com
+
+  </footer>
+
+
+
+  <!-- =========================
+       FIKSNI POZIV NA MOBITELU
+  ========================== -->
+
+  <div class="call-fixed">
+
+    <a
+      href="tel:+385916404982"
+      onclick="return gtag_report_conversion('tel:+385916404982');"
+    >
+
+      📞 NAZOVI ODMAH —
+      +385 91 640 4982
+
+    </a>
+
+  </div>
+
 
 </body>
-
 </html>
